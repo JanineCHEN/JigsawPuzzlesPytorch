@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = JigsawNet(1, 1000)
 model.to(device)
-model.load_state_dict(torch.load('log/exp/checkpoints/CP_0_0.9068.pth', map_location=device))
+model.load_state_dict(torch.load('', map_location=device))
 model.eval()
 img_dir = ''
 
