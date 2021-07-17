@@ -56,7 +56,7 @@ class FoldDataset(Dataset):
 
 if __name__ == '__main__':
 
-    path = '/Volumes/Data/甲状腺（体检科）数据/TUDPE/images'
+    path = ''
     permutations = np.load('permutations.npy').tolist()
     dataset = FoldDataset(path, os.listdir(path), permutations, in_channels=1)
     dataloader = DataLoader(dataset, batch_size=1, num_workers=8, pin_memory=True, shuffle=True)
