@@ -129,10 +129,10 @@ if __name__ == '__main__':
     # ---- init ----
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     args = get_args()
-    imgs_dir = '/home/data/yzy/data/Breast/images'
+    imgs_dir = ''
     log_path = 'log/'
-    train_folds = '/home/data/yzy/code/SuggestiveAnnotation/dataset/Breastfolds/train_set_4076.csv'
-    val_folds = '/home/data/yzy/code/SuggestiveAnnotation/dataset/Breastfolds/val_set_1019.csv'
+    train_folds = ''
+    val_folds = ''
 
     try:
         os.makedirs(log_path)
