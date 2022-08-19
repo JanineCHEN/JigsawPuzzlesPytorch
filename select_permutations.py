@@ -25,7 +25,6 @@ with tqdm(total=n_classes) as bar:
             P = np.concatenate([P, P_hat[j].reshape([1, -1])], axis=0)
 
         P_hat = np.delete(P_hat, j, axis=0)
-        P_hat = np.delete(P_hat, j, axis=0)
         D = cdist(P, P_hat, metric='hamming').mean(axis=0).flatten()
         j = D.argmax()
         bar.update(1)
